@@ -28,7 +28,7 @@ do
 
     for((j = 0; j<4; j++)) 
     do
-        if(( ${arithmetic[$j]} < ${arithmetic[$((j+1))]} ))
+        if(( ${arithmetic[$j]} > ${arithmetic[$((j+1))]} ))
         then
             temp=${arithmetic[$j]} 
             arithmetic[$j]=${arithmetic[$((j+1))]}   
@@ -36,5 +36,5 @@ do
         fi
     done
 done
-echo "array in descending order"
+echo "array in ascending order"
 echo "${arithmetic[@]}"
